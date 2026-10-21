@@ -1,0 +1,74 @@
+[
+ {
+  "key": "cnxt_final",
+  "label": "ConvNeXt-Tiny - final (best single model)",
+  "arch": "convnext_tiny",
+  "file": "cnxt_final.pth",
+  "size": 320,
+  "flip": true,
+  "description": "ImageNet-1k weights, fine-tuned with augmentation, CutMix, 288 px and train+validation images; tested at 320 px with flip averaging.",
+  "top1": 89.4,
+  "avg": 89.2,
+  "run": "g8_cnxt1k_288_full"
+ },
+ {
+  "key": "cnxt_ft",
+  "label": "ConvNeXt-Tiny - fine-tuned",
+  "arch": "convnext_tiny",
+  "file": "cnxt_ft.pth",
+  "size": 224,
+  "flip": false,
+  "description": "ImageNet-1k weights, all layers fine-tuned with augmentation (224 px).",
+  "top1": 85.3,
+  "avg": 85.3,
+  "run": "f4_cnxt1k_ft"
+ },
+ {
+  "key": "cnxt_scratch",
+  "label": "ConvNeXt-Tiny - from scratch",
+  "arch": "convnext_tiny",
+  "file": "cnxt_scratch.pth",
+  "size": 224,
+  "flip": false,
+  "description": "Random initial weights, no pretraining (under-trained: 60 epochs on ~4.8k images).",
+  "top1": 16.4,
+  "avg": 15.8,
+  "run": "m_cnxt_scratch"
+ },
+ {
+  "key": "r50_final",
+  "label": "ResNet50 - final",
+  "arch": "resnet50",
+  "file": "r50_final.pth",
+  "size": 288,
+  "flip": false,
+  "description": "ImageNet-1k weights, fine-tuned with augmentation, CutMix, 288 px and train+validation images.",
+  "top1": 82.2,
+  "avg": 81.8,
+  "run": "r8_r50_288_full"
+ },
+ {
+  "key": "r50_ft",
+  "label": "ResNet50 - fine-tuned",
+  "arch": "resnet50",
+  "file": "r50_ft.pth",
+  "size": 224,
+  "flip": false,
+  "description": "ImageNet-1k weights, all layers fine-tuned with augmentation (224 px).",
+  "top1": 76.9,
+  "avg": 76.6,
+  "run": "r4_r50_ft"
+ },
+ {
+  "key": "r50_scratch",
+  "label": "ResNet50 - from scratch",
+  "arch": "resnet50",
+  "file": "r50_scratch.pth",
+  "size": 224,
+  "flip": false,
+  "description": "Random initial weights, no pretraining.",
+  "top1": 39.5,
+  "avg": 38.6,
+  "run": "m_r50_scratch"
+ }
+]
